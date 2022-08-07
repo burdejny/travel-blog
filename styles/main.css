@@ -1,0 +1,81 @@
+@import url(./_reset.css);
+@import url(./_base.css);
+@import url(./_typography.css);
+@import url(./_base-blog.css);
+
+/* Flex Container */
+
+body {
+    display: flex;
+    flex-direction: column;
+} 
+
+/* Flex Item */
+
+.top {
+    margin-bottom: 15px;
+}
+.flex-nav {
+    order: -1;
+    margin-bottom: 20px;
+}
+.signup {
+    order: 2;
+}
+footer {
+    order: 4;
+    margin-bottom: 20px;
+}
+.details {
+    order: 1;
+}
+.hero {
+    order: 3;
+}
+img {
+    min-height: 600px;
+}
+ul {
+    display: none;
+}
+.open {
+    display: flex;
+    flex-wrap: wrap;
+}
+li {
+    flex-basis: 100%;
+}
+.social {
+    flex-basis: 25%;
+}
+
+@media all and (min-width: 550px) {
+.top {
+    order: -1;
+}
+.hero {
+    order: 0;
+}
+form.signup {
+    flex-direction: row;
+    justify-content: center;
+}
+li {
+    flex-basis: 50%;
+}
+}
+
+@media all and (min-width: 900px) {
+    .toggleNav {
+        display: none;
+    }
+    li {
+        flex-basis: 12.5%;
+    }
+    .social {
+        flex-basis: 6.25%;
+    }
+    body {
+        padding: 2%;
+    }
+}
